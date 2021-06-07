@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            span{
+                color: red;
+            }
+            div {
+            text-align: center;
+            font-size: 100px;
+            padding: 100px;
+        }
+        
+        button {
+            display: block;
+            margin: 50px auto;
+            width: 300px;
+            height: 100px;
+            font-size: 30px;
+        }
+        </style>
+    </head>
+    <body>
+        <button onclick="timing()">计时开始</button>
+        <button onclick="stop()">计时结束</button>
+        <div id="demo">
+
+        </div>
+        <script>
+            var i=0;
+            var div=document.getElementById("demo");
+            var t;
+
+            function timing(){
+                t=setInterval(updatenum,1000);
+                updatenum();
+               
+            }
+               function stop() {
+                clearInterval(t);
+                updatenum();
+                }
+            
+            
+            function updatenum(){
+                div.innerHTML="time passed:"+ "<span>"+ i++ + "<span>" +"s";
+            }
+        </script>
+    </body>
+</html>
