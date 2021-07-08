@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>留言互动</title>
+       <style>
+            body{
+                background-image: url("海滩.jpg");
+                background-repeat: no-repeat;
+               background-size: cover;
+            }
+           ul{
+               list-style-type:none;
+               display: block;
+               font-size: 25px;
+               margin: -6px auto;
+               overflow: hidden;  
+               font-family: "宋体";
+               position:fixed;
+               left: 60%;
+           }
+           li{
+               float: left;
+               color: rgb(255, 255, 255);
+        
+           }
+           li a{
+               float: left;
+               display: inline-block;
+               color: white;
+               text-align: center;
+               padding: 10px 15px;
+               text-decoration:none;
+           }
+           li a:active{
+               background-color: snow;
+               color: teal;
+           }
+           li a:hover{
+               background-color:rgb(62, 166, 252)
+           }
+           .bt{
+               display: inline-block;
+                position:relative;
+                margin-top: 50px;
+                margin-left: 100px;
+                width: 100px;
+                height: 300px;
+                background-color: rgb(253, 253, 253);
+                opacity: 0.4;
+                filter: alpha(opacity=40);
+           }
+           .bt p{
+               font-size: 50px;
+               font-family: "幼圆";
+               margin-left: 20px;
+           }
+           .lx{
+               display: inline-block;
+               position: absolute;
+               margin: 300px 100px;
+           }
+           table{
+                background: white;
+                border: 2px rgb(236, 178, 178) solid;
+                text-align: left;
+               width: 550px;
+               height: 300px;
+               color: black;
+               border-collapse:collapse;
+            }
+           #mp tr:nth-child(2){
+            background:rgba(14, 187, 8, 0.616);
+            border-collapse:collapse;
+            background-image: url("dlam.jpg");
+            width: 200px;
+            height:180px;
+            background-size:250px ;
+            background-position: right;
+            background-repeat: no-repeat;
+            color: rgb(253, 251, 107);
+           }
+           .div1{
+            width: 450px;
+            display: inline-block;
+            position: absolute;
+            margin:300px 800px;
+        }
+       
+       </style>
+    </head>
+    <body>
+        <div class="dh">
+            <ul>
+                <li><a href="个人简介.html" target="_top">个人简介</a></li>
+                <li><a href="兴趣爱好.html" target="_top">兴趣爱好</a></li>
+                <li><a href="技能介绍.html" target="_top">技能介绍</a></li>
+                <li><a href="留言互动.html" target="_top" style="background-color: rgba(10, 146, 101, 0.486);">留言互动</a></li>
+            </ul>
+        </div>
+        <div class="bt">
+            <p>留<br>言<br>互<br>动</p>
+        </div>
+        <div class="lx">
+            <table id="mp">
+                <tr>
+                    <td style="text-indent: 2em;"><h2>联系方式</h2></td>    
+                </tr>
+                <tr>
+                    <td style="padding-left: 2em;"><h5>邮箱：136xxxxxxx@qq.com<br>电话：159xxxxxxxx<br>地址：杭州电子科技大学<br></h5></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><h4>Editing,Writing,and web development service</h4></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div1" id="div1">
+            <span>昵称：</span><input type="text" id="user" name="user" style="width: 250px;">
+            <br><br>
+            <span>留言：</span><textarea id="lang" style="width: 250px;"></textarea><br>
+            <input type="button" value="提交评价" id="btn" style="margin: 10px 55px;">
+        </div>
+        <script type="text/javascript">
+            var user=document.getElementById('user');
+            var lang=document.getElementById('lang');
+            document.getElementById('btn').onclick=function(){
+                var cont=document.createElement('div');
+                cont.innerHTML='<p>'+user.value+':'+lang.value+'</p><hr>';
+                document.getElementById('div1').appendChild(cont);
+                user.value='';
+                lang.value='';
+            }
+        </script>
+    </body>
+</html>
