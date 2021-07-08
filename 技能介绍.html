@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>技能介绍</title>
+       <style>
+           body{
+               background-image: url("大桥.jpg");
+               background-repeat: no-repeat;
+               background-size: cover;
+           }
+           ul{
+               list-style-type:none;
+               display: block;
+               font-size: 25px;
+               margin: -6px auto;
+               overflow: hidden;  
+               font-family: "宋体";
+               position:fixed;
+               left: 60%;
+           }
+           li{
+               float: left;
+               color: rgb(255, 255, 255);
+        
+           }
+           li a{
+               float: left;
+               display: inline-block;
+               color: white;
+               text-align: center;
+               padding: 10px 15px;
+               text-decoration:none;
+           }
+           li a:active{
+               background-color: snow;
+               color: teal;
+           }
+           li a:hover{
+               background-color:rgb(62, 166, 252)
+           }
+           .js{
+               display: inline-block;
+               position: absolute;
+               margin-left: 80px;
+               font-family: "华文琥珀";
+               font-size: 60px;
+           }
+           .sp1{
+              display: inline-block;
+              position:absolute;
+              margin-top: 200px;
+              margin-left: 35px;
+              width:30%;
+           }
+           .sp2{
+            display: inline-block;
+            position: absolute;
+              margin-top: 160px;
+              margin-left:570px;
+              width:30%;
+           }
+           .hb img{
+               display: inline-block;
+               position: absolute;
+               margin-top: 200px;
+               margin-left: 1200px;
+               width: 300px;
+               height: 400px;
+               }
+            .sp1,.sp2,.hb{
+                   opacity: 0.5;
+                   filter: alpha(opacity=50);
+               }
+               .sp1:hover,.sp2:hover,.hb:hover{
+                   opacity: 1.0;
+                   filter: alpha(opacity=100;
+               }
+       </style>
+    </head>
+    <body>
+        <div class="dh">
+            <ul>
+                <li><a href="个人简介.html" target="_top">个人简介</a></li>
+                <li><a href="兴趣爱好.html" target="_top">兴趣爱好</a></li>
+                <li><a href="技能介绍.html" target="_top" style="background-color: rgba(10, 146, 101, 0.486);">技能介绍</a></li>
+                <li><a href="留言互动.html" target="_top">留言互动</a></li>
+            </ul>
+        </div>
+        <div class="js">
+           <p>我的作品</p>
+        </div>
+        <div class="sp1">
+            <video  height="400px" width="500px" controls>
+            <source src="环保.mp4">
+            </video>
+        </div>
+        <div class="sp2">
+            <video height="440px" width="600px" controls>
+            <source src="饥饿游戏2.mov">
+            </video>
+        </div>
+        <div class="hb">
+            <img src="海报1.jpg" >
+        </div>
+    </body>
+</html>
