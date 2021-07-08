@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>个人简介</title>
+        <style>
+            body{
+                background-image: url("屋顶.jpg");
+                background-repeat: no-repeat;
+               background-size: cover;
+            }
+            .bt{
+                display:inline-block;
+                padding: 20px 30px;
+                float: left;
+                font-family:"隶书";
+            }
+            ul{
+               list-style-type:none;
+               display: block;
+               font-size: 25px;
+               margin: -6px auto;
+               overflow: hidden;  
+               font-family: "宋体";
+               position:fixed;
+               left: 60%;
+           }
+           li{
+               float: left;
+               color: rgb(255, 255, 255);
+        
+           }
+           li a{
+               float: left;
+               display: inline-block;
+               color: white;
+               text-align: center;
+               padding: 10px 15px;
+               text-decoration:none;
+           }
+           li a:active{
+               background-color: snow;
+               color: teal;
+           }
+           li a:hover{
+               background-color:rgb(62, 166, 252)
+           }
+          .js{
+              display: inline-block;
+              margin:auto 300px;
+          }
+          pre{
+              display: inline-block;
+              float: right;
+              margin: 250px 50px;
+              font-size: 25px;
+              font-weight: 700;
+              line-height: 40px;
+          }
+          img{
+              width: 200px;
+              height: 120px;
+              margin-bottom: 150px;
+              margin-left: 150px;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="bt">
+        <p style="font-size: 200%;"><span style="font-size: 250%;color: navy;">个</span><br>&nbsp;人<br>简<br>&nbsp;介</p>
+        </div>
+        <div class="dh">
+            <ul>
+                <li><a href="个人简介.html" target="_top" style="background-color: rgba(10, 146, 101, 0.486);">个人简介</a></li>
+                <li><a href="兴趣爱好.html" target="_top">兴趣爱好</a></li>
+                <li><a href="技能介绍.html" target="_top">技能介绍</a></li>
+                <li><a href="留言互动.html" target="_top">留言互动</a></li>
+            </ul>
+        </div>
+        <div class="js">
+            <p style="font-size: 100px;font-family: 宋体;">你好，<br>我是<span style="color: rgb(22, 99, 243);">徐铭蔚</span>。</p>
+            <pre>
+                我是杭州电子科技大学传播学的一名学生。
+                我是一个肯吃苦耐劳，能承受工作压力，踏实且富有上进心的人。
+                我对待工作认真负责，善于沟通、协调，有较强的组织能力与团队精神。
+                我是一名乐观主义者，遇事都会从其好的一面去观察，对事情大多抱有乐观态度。
+                善于人际交往，喜欢随遇而安，能很快适应陌生的环境。
+            </pre>
+        </div>
+        <div class="timeline">
+            <img src="时光轴.png">
+        </div>
+        <script>
+                var obj= document.querySelector("img");
+                obj.addEventListener("click",function(){
+                  obj.style.height=300+'px';
+                  obj.style.width=1400+'px';
+                  obj.src="我的大学生活.png";
+                })
+        </script>
+    </body>
+</html>
