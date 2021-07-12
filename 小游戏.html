@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>他在说谎</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <style>
+         img{
+             display: block;
+             margin: 50px auto;
+             z-index: -1;
+         }
+         #ts{
+             display: inline-block;
+             position: absolute;
+             margin: -550px 700px;
+             width: 400px;
+             background-color:bisque;
+             border: rgb(255, 129, 11) 3px solid;
+             border-radius: 10px;
+             padding: 10px;
+             z-index: -2;
+         }
+      </style>
+    </head>
+    <body>
+        <img src="大门.jpg">
+        <div id="ts"></div>
+         <script>
+           var obj= document.querySelector("img");
+           obj.addEventListener("click",function(){
+           document.getElementById("ts").innerHTML="两天前的一个雨夜，迷幻酒吧的老板被发现在酒吧内的休息室死亡，经过调查，警方锁定了嫌疑人为酒吧服务员小K,现在需要到他家里进行最后的取证，找到关键证物。"
+           document.getElementById("ts").style.zIndex=1;
+        })
+           var kk=document.getElementById("ts")
+            kk.onclick=function(){
+                window.location="房间.html"
+            }
+         </script>
+    </body>
+</html>

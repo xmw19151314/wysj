@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <style>
+            body{
+                background-image: url("思考.jpg");
+                background-repeat: no-repeat;
+                background-size: 35%;
+                background-position-x: right;
+            }
+            .k1{
+                display: inline-block;
+                position: absolute;
+                margin: 30px 35%;
+            }
+            button{
+                font-size: 15px;
+            }
+            .k2{
+                display: none;
+                position: absolute;
+                margin: 180px 35%;
+            }
+           #k3{
+               display: none;
+               position: absolute;
+               margin: 320px 35%;
+               background-color: rgb(167, 216, 216);
+               width: 500px;
+               padding: 10px;
+           }
+        </style>
+    </head>
+    <body>
+         <div class="k1">
+             <h3>经过搜查取证，你认为小k的杀人原因是：</h3>
+             <input type="radio" name="yy" value="感情">感情
+             <input type="radio" name="yy" value="钱财">钱财<br><br>
+             <input type="button" name="tj" value="提交" onclick="myfunction()">
+             <button id="btn" onclick="shownew()">next</button>
+        </div>
+        <div class="k2">
+            <h3>小k最后是通过什么杀人的：</h3>
+            <input type="text" name="xq">
+            <input type="button" name="jg" value="确定" onclick="showcase()">
+            <button id="jg" onclick="result()">查看真相</button>
+        </div>
+        <div id="k3">7.10，那天的雨下的格外的大，从医院走出来小K神色恍惚，脑海里女朋友苍白的病容和医生冷酷的话语不断交织，“不行，我一定要救她！”小k决绝的向雨中走去。
+            6点的酒吧冷冷清清，小k看到老板独自在吧台喝酒，决定等下班后找老板借钱。<br>深夜三点，酒吧歇业，小k留到了最后，敲响了休息室的门。可任凭小k苦苦哀求，老板也只答应借
+            给小K5万元，可这离手术费用还远远不够！明明，明明他这么有钱，为什么不肯救别人！小k的心里充斥绝望和愤怒，和老板推搡间，捡起一旁的向伞打像了老板。<br>
+            那天夜晚的争执过后，小k被老板辞退，不甘心与愤怒烧毁了他的理智，他从非法渠道购买了高剂量的有害金属——铊，在酒吧生意最忙的时候溜进了休息室，并在水壶、饮用水中投毒。
+            投毒后他把老板藏起来的钻石全部带走，并把剩余的毒药倒进了花盆里。
+        </div>
+        <script>
+            var yi=document.getElementsByName("tj");
+            var reason=document.getElementsByName("yy");
+            function myfunction() {
+                for(var i=0; i<1; i++){
+                    if(reason[0].checked) {alert("再想想，小k和老板似乎没有感情纠纷。")}
+                    if(reason[1].checked) {alert("没错！鱼缸里的那些钻石正是小K杀死老板后从他的房间里偷来的。")}
+                }
+            }
+            var btn1=document.getElementById("btn");
+            var q2=document.getElementsByClassName("k2")[0];
+            function shownew(){
+                q2.style.display="inline-block";
+            }
+            function showcase(){
+                var txt=document.getElementsByName("xq")[0].value;
+                if(txt=="毒药"||txt=="毒"){alert("回答正确！花盆里的白色晶体就是毒药的残留！")}
+                else{alert("好像不是因为这个呢，再想想吧！")}
+            }
+            function result(){
+               var btn2=document.getElementById("jg");
+               var q3=document.getElementById("k3");
+               q3.style.display="inline-block";
+            }
+        </script>
+    </body>
+</html>

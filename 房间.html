@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>他在说谎</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <style>
+         body{
+             background-image: url("房间3.jpg");
+             background-repeat: no-repeat;
+             background-position-x: center;
+             background-position-y:-20%;
+         }
+         .ts{
+             background-color: rgb(104, 181, 248);
+             width: 400px;
+             display: inline-block;
+            position: absolute;
+            font-size: 30px;
+         }
+         #zp{
+             display: inline-block;
+             position:absolute;
+             width: 100px;
+             height: 100px;
+             margin:12% 46%;
+             opacity: 0.0;
+         }
+         #hp{
+            display: inline-block;
+             position:absolute;
+             width: 80px;
+             height: 80px;
+             margin:25% 55%;
+             opacity: 0.0;
+         }
+         #ys{
+            display: inline-block;
+             position:absolute;
+             width: 100px;
+             height: 135px;
+             margin:15% 27%;
+             opacity: 0.0;
+         } 
+         #yg{
+            display: inline-block;
+             position:absolute;
+             width: 80px;
+             height: 80px;
+             margin:20% 63%;
+             opacity: 0.0;
+         }
+         #sb{
+            display: inline-block;
+             position:absolute;
+             width: 70px;
+             height: 70px;
+             margin:20% 35%;
+             opacity: 0.0;
+         } 
+         #lz{
+            display: inline-block;
+             position:absolute;
+             width: 130px;
+             height: 100px;
+             margin:33% 66%;
+             opacity: 0.0;
+         }
+         #xx{
+            display: inline-block;
+             position:absolute;
+             width: 90px;
+             height: 80px;
+             margin:34% 51%;
+             opacity: 0.0;
+         }
+         .box{
+               display: inline-block;
+               position: absolute;
+               margin: 50px 0;
+         }
+      </style>
+    </head>
+    <body>
+        <button id="zp" onclick="function1()"></button>
+        <button id="hp" onclick="function2()"></button>
+        <button id="ys" onclick="function3()"></button>
+        <button id="yg" onclick="function4()"></button>
+        <button id="sb" onclick="function5()"></button>
+        <button id="lz" onclick="function6()"></button>
+        <button id="xx" onclick="function7()"></button>
+        <div class="ts">你有20秒的时间搜索该房间。</div>        
+        <div class="box">
+        <h1>剩余时间：<span class="clock">20</span>秒</h2>
+        </div>
+        <script>
+            function function1() {
+                alert("这张照片上是小k和一个女子的合影。两人好像是情侣关系。")
+            }
+            function function2() {
+                alert("花盆的土壤里有少量白色的晶体。")
+            }
+            function function3() {
+                alert("雨伞的尖头上有死者衣物的线头。")
+            }
+            function function4() {
+                alert("鱼缸的底部碎石中夹杂着几粒钻石。")
+            }
+            function function5() {
+                alert("日记本有几页被撕掉了，最后一页依稀透出“救她”两个字。")
+            }
+            function function6() {
+                alert("篮子里是一些新鲜的蔬菜和肉类，看样子他准备做饭。")
+            }
+            function function7() {
+                alert("这个小熊看起来有些年头了，小熊的衣服里写了“KT”。")
+            }
+            var t = 20;
+	        var time = document.getElementsByClassName("clock")[0];
+	        function fun() {
+		    t--;
+		    time.innerHTML = t;
+		    if(t <= 0) {
+             location.href="真相.html";
+			 clearInterval(inter);
+		}
+	}
+	      var inter = setInterval("fun()", 1000);
+        </script>
+    </body>
+</html>
